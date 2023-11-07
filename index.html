@@ -12,13 +12,15 @@
        <div class="container">
             <nav>
                 <img src="images/log.png" class="logo">
-                <ul>
+                <ul id="sidemenu">
                     <li><a href="#">HOME</a></li>
                     <li><a href="#">ABOUT</a></li>
                     <li><a href="#">SERVICES</a></li>
                     <li><a href="#">PORTFOLIO</a></li>
                     <li><a href="#">CONTACT</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Data Analyst</p>
@@ -180,6 +182,9 @@
             
         </div>
     </div>
+    <div class="copyright">
+        <p>Copyright © Crismar Jerome Mercado <i class="fa-solid fa-heart-pulse"></i></p>
+    </div>
 </div>
 
 
@@ -200,6 +205,19 @@
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu")
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+
+
     </script>
 </body>
 </html>
