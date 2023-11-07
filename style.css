@@ -16,7 +16,9 @@ body{
     background-image: url(images/bbg.png);
     background-size: cover;
     background-position: center;
+    align-items: center;
 }
+
 
 .container{
     padding: 10px 10%;
@@ -27,6 +29,11 @@ nav{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: fixed;
+    width: 80%;
+    background: #B6B7C8;
+    top: 0;
+    z-index: 3;
 
 }
 
@@ -47,7 +54,7 @@ nav ul li{
 nav ul li a{
     color:#000000;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     position: relative;
 }
@@ -114,11 +121,13 @@ nav ul li a:hover::after{
     font-size: 60px;
     color: #000000;
     font-weight: 600;
+    
 }
 
 .tab-titles{
     display: flex;
     margin: 20px 0 40px;
+    
 }
 
 .tab-links{
@@ -138,6 +147,7 @@ nav ul li a:hover::after{
     left: 0;
     bottom: -8px;
     transition: 0.5s;
+    
 }
 
 .tab-links.active-link::after{
@@ -167,7 +177,7 @@ nav ul li a:hover::after{
 
 
 #services{
-    padding: 30px 0;
+    padding: 80px 0;
 }
 
 .services-list{
@@ -212,7 +222,7 @@ nav ul li a:hover::after{
 
 
 #portfolio{
-    padding: 50px 0;
+    padding: 80px 0;
 }
 .work-list{
     display: grid;
@@ -294,6 +304,7 @@ nav ul li a:hover::after{
 /*CONTACT*/
 
 
+
 .contact-left{
     flex-basis: 35%;
 }
@@ -321,6 +332,18 @@ nav ul li a:hover::after{
     transition: transform 0.5s;
 }
 .social-icons a:hover{
+    color:#148eda;
+    transform: translateY(-5px);
+}
+.hovereff{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #080d74;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.hovereff:hover{
     color:#148eda;
     transform: translateY(-5px);
 }
@@ -372,6 +395,8 @@ nav .fa-solid{
 @media only screen and (max-width: 600px){
     .hero{
         background-image: url(images/pbg.png);
+        width: 100%;
+        background-position: center;
     }
     .header-text{
         margin-top: 25%;
@@ -384,20 +409,29 @@ nav .fa-solid{
         display: block;
         font-size: 25px;
     }
+    nav{
+        background: none;
+        position: absolute;
+
+
+    }
+
     nav ul{
-        background: #3D677D;
+        background: linear-gradient(rgba(0,0,0,0.6), #3D677D);
         position: fixed;
         top: 0;
-        right: -200px;
-        width: 200px;
+        right: -100%;
+        width: 100%;
         height: 100vh;
         padding-top: 50px;
         z-index: 2;
-        transition: right 0.5s;
+        transition: right 0.7s;
         color: #fff;
+        text-align: center;
     }
     nav ul li a{
         color: #fff;
+        top: 50px;
     }
     nav ul li{
         display: block;
@@ -405,13 +439,15 @@ nav .fa-solid{
     }
     nav ul .fa-solid{
         position: absolute;
-        top: 25px;
-        left: 25px;
+        top: 23px;
+        left: 319px;
         cursor: pointer;
+        font-size: 25px;
     }
     .sub-title{
         font-size: 40px;
     }
+
     .about-col-1, .about-col-2{
         flex-basis: 100%;
     }
